@@ -7,9 +7,10 @@
         <table>
         {% for list in postlist %}
             <ul>
-                <li><a href="blog/{{list.pk}}">{{list.postname}}</a></li>
+                <li><a href="/blog/{{list.pk}}">{{list.postname}}</a></li>
             </ul>
         {% endfor %}
         </table>
+        <a href="/blog/new">작성</a>
     </body>
 </html>
