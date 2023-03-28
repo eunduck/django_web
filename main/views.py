@@ -9,3 +9,7 @@ def index(request):
 def blog(request):
 	postlist = Post.objects.all()
 	return render(request, 'main/blog.html', {'postlist':postlist})
+
+def detail(request, pk):
+	post = Post.objects.get(pk=pk)
+	return render(request, 'main/detail.html', {'post':post})
